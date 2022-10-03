@@ -1,0 +1,16 @@
+﻿[Label1]
+Coordinates=199,10,53,58
+
+[cmbAnimal]
+Coordinates=10,10,101,124
+
+[btnProcessar]
+Coordinates=262,10,90,58
+
+[]
+Coordinates=248,1,91,36
+
+[mmHistorico]
+Coordinates=121,10,68,58
+Visible=True
+
