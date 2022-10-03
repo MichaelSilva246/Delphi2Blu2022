@@ -1,0 +1,79 @@
+unit Positivo;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    mmPositivo: TMemo;
+    mmZero: TMemo;
+    mmNegativo: TMemo;
+    procedure Button1Click(Sender: TObject);
+  private
+  procedure VerificaNumero;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  self.VerificaNumero;
+end;
+
+procedure TForm1.VerificaNumero;
+var
+  I: Integer;
+  xNumero: Double;
+  xPositivos: array[0..4] of String;
+  xNegativos: array[0..4] of String;
+  xZero: array[0..4] of String;
+
+begin
+
+  for I := 0 to 4 do
+
+  begin
+     xNumero:= StrToFloat(inputbox('Produto', 'Digite o Numero', ''));
+
+     if xNumero >0  then
+     xPositivos[I] := 'O Numero '+FloatToStr(xNumero)+ ' é Positivo.';
+
+     if xNumero <0  then
+     xNegativos[I] := 'O Numero '+FloatToStr(xNumero)+ ' é Negativo.';
+
+     if xNumero =0  then
+     xZero[I] := 'O Numero '+FloatToStr(xNumero)+ ' é Zero.';
+
+  end;
+
+  for I := 0 to 4 do
+    begin
+      mmPositivo.lines := xPositivos[I];
+      mmNegativo.lines := xNegativos[I];
+      mmZero.lines := xZero[I];
+    end;
+
+
+
+end;
+
+end.
+{Faça um algoritmo que receba “N” números e mostre positivo,
+negativo ou zero para cada número;

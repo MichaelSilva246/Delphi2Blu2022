@@ -1,0 +1,84 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 483
+  ClientWidth = 613
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 56
+    Top = 63
+    Width = 122
+    Height = 19
+    Caption = 'Primeiro Numero'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 261
+    Top = 63
+    Width = 124
+    Height = 19
+    Caption = 'Segundo Numero'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 121
+    Top = 24
+    Width = 234
+    Height = 25
+    Caption = 'Qual o Maior Numero?'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object lbResultado: TLabel
+    Left = 88
+    Top = 200
+    Width = 282
+    Height = 65
+  end
+  object btnNum1: TEdit
+    Left = 56
+    Top = 88
+    Width = 137
+    Height = 21
+    TabOrder = 0
+  end
+  object btnNum2: TEdit
+    Left = 261
+    Top = 88
+    Width = 137
+    Height = 21
+    TabOrder = 1
+  end
+  object btnMaiorNum: TButton
+    Left = 160
+    Top = 136
+    Width = 123
+    Height = 33
+    Caption = 'Maior Numero'
+    TabOrder = 2
+    OnClick = btnMaiorNumClick
+  end
+end

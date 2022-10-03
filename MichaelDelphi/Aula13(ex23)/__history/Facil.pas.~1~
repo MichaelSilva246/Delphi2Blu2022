@@ -1,0 +1,48 @@
+unit Facil;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+    TForm1 = class(TForm)
+    edtValor: TEdit;
+    Button1: TButton;
+    lbResultado: TLabel;
+  private
+    procedure VerificaNumero;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+{ TForm1 }
+
+procedure TForm1.VerificaNumero;
+var
+  xNumero: Double;
+begin
+  xNumero := StrToFloat(edtValor.text);
+
+  if (xNumero > 80) or (xNumero < 25) or (xNumero = 40) then
+  lbResultado.caption := (' O Numero atende os parametros' +
+                 'É Maior que 80, Ou Menor que 25, ou =40'+FloatToStr(xNumero))
+  else
+  lbResultado.caption := (' Desculpe o numero não atende os parametros ' +
+                 'É Maior que 80, Ou Menor que 25, ou =40'+FloatToStr(xNumero));
+
+end;
+
+end.
+{ Faça um algoritmo que receba um número e mostre uma mensagem
+caso este número seja maior que 80, menor que 25 ou igual a 40;

@@ -1,0 +1,64 @@
+unit uFmMenu;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uFrmCliente, ufrmFornecedor,
+  uFrmProdutos;
+
+type
+  TfmSisetmaMenu = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadastros1: TMenuItem;
+    Sair1: TMenuItem;
+    Clientes1: TMenuItem;
+    Fornecedores1: TMenuItem;
+    Produtos1: TMenuItem;
+    procedure Sair1Click(Sender: TObject);
+    procedure Clientes1Click(Sender: TObject);
+    procedure Fornecedores1Click(Sender: TObject);
+    procedure Produtos1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  fmSisetmaMenu: TfmSisetmaMenu;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfmSisetmaMenu.Clientes1Click(Sender: TObject);
+begin
+  if fmClientes = nil then
+    fmClientes:= TfmClientes.create(Self);
+   fmClientes.show;
+
+end;
+
+procedure TfmSisetmaMenu.Fornecedores1Click(Sender: TObject);
+begin
+  if fmFornecedor = nil then
+    fmFornecedor:= TfmFornecedor.create(Self);
+     fmFornecedor.show;
+
+end;
+
+procedure TfmSisetmaMenu.Produtos1Click(Sender: TObject);
+begin
+  if fmProdutos = nil then
+    fmProdutos:= TfmProdutos.create(Self);
+   fmProdutos.show;
+
+end;
+
+procedure TfmSisetmaMenu.Sair1Click(Sender: TObject);
+begin
+  Self.Close;
+end;
+
+end.

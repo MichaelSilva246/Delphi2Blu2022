@@ -1,0 +1,100 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    lbResultado: TLabel;
+    mmValores: TMemo;
+    btnCompr: TButton;
+    procedure btnComprClick(Sender: TObject);
+  private
+  procedure CalculaCarros;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+{ TForm1 }
+
+procedure TForm1.btnComprClick(Sender: TObject);
+begin
+  self.CalculaCarros;
+end;
+
+procedure TForm1.CalculaCarros;
+const
+  cAlcool   = 0.25;
+  cGasolina = 0.21;
+  cDiesel   = 0.14;
+var
+  xValorVeiculo, xDesconto,
+    xCompraComDesconto : Double;
+  xCombustivel : String;
+  xTotalDesconto, xTotalPagar: Double;
+begin
+  xTotalDesconto:= 0;
+  xTotalPagar:= 0;
+  xValorVeiculo:= StrToFloat(inputbox('Valor', 'Digite o Valor do Veiculo', ''));
+
+  if xValorVeiculo = 0 then
+    lbResultado.caption := 'fim';
+
+  repeat
+    xCombustivel:= inputbox('Combustivel', 'Combustivel do Veiculo, A/G/D,','');
+
+
+    if xCombustivel = AnsiUpperCase('G') then
+    begin
+      xDesconto := xValorVeiculo * Cgasolina;
+      xCompraComDesconto := xValorVeiculo - xDesconto;
+      xValorVeiculo:= StrToFloat(inputbox('Valor', 'Digite o Valor do Veiculo', ''));
+    end
+
+    else if xCombustivel = AnsiUpperCase('A')  then
+    begin
+      xDesconto := xValorVeiculo * cAlcool;
+      xCompraComDesconto := xValorVeiculo - xDesconto;
+      xValorVeiculo:= StrToFloat(inputbox('Valor', 'Digite o Valor do Veiculo', ''));
+    end
+
+    else if xCombustivel = AnsiUpperCase('D')then
+    begin
+      xDesconto := xValorVeiculo * cDiesel;
+      xCompraComDesconto := xValorVeiculo - xDesconto;
+      xValorVeiculo:= StrToFloat(inputbox('Valor', 'Digite o Valor do Veiculo', ''));
+    end;
+    mmValores.lines.add('Valor Desconto: '+FloatToStr(xDesconto)+
+                        'Valor final :'   +FloatToStr(xCompraComDesconto));
+    xTotalDesconto:= xTotalDesconto + xDesconto;
+    xTotalPagar:= xTotalPagar + xCompraComDesconto;
+
+  until (xValorVeiculo = 0);
+
+  lbResultado.caption := 'Total A pagar :' +FloatToStr(xTotalPagar)+ ' Total Desconto :' +FloatToStr(xTotalDesconto);
+
+end;
+
+
+
+
+end.
+{A concessionária de veículos “CARANGO” está vendendo os seus
+veículos com desconto. Faça um algoritmo que calcule e exiba o
+valor do desconto e o valor a ser pago pelo cliente. O desconto
+deverá ser calculado sobre o valor do veículo de acordo com o
+combustível (álcool – 25%, gasolina – 21% ou diesel –14%).
+Com valor do veículo zero encerra entrada de dados. Informe
+total de desconto e total pago pelos clientes;

@@ -1,0 +1,52 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    btnOk: TButton;
+    btnCancel: TButton;
+    procedure btnOkClick(Sender: TObject);
+    procedure btnCancelClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnCancelClick(Sender: TObject);
+var
+  buttonSelected : Integer;
+begin
+  // Show a confirmation dialog
+  buttonSelected := MessageDlg('Confirmation',mtError, mbOKCancel, 0);
+
+  // Show the button type selected
+  if buttonSelected = mrOK     then ShowMessage('OK pressed');
+  if buttonSelected = mrCancel then ShowMessage('Cancel pressed');
+end;
+
+procedure TForm1.btnOkClick(Sender: TObject);
+var
+  buttonSelected : Integer;
+begin
+  // Show a confirmation dialog
+  buttonSelected := MessageDlg('Confirmation',mtError, mbOKCancel, 0);
+
+  // Show the button type selected
+  if buttonSelected = mrOK     then ShowMessage('OK pressed');
+  if buttonSelected = mrCancel then ShowMessage('Cancel pressed');
+end;
+
+end.

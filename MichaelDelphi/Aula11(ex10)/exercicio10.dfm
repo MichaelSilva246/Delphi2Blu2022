@@ -1,0 +1,97 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 603
+  ClientWidth = 603
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lbPrecoFinal: TLabel
+    Left = 120
+    Top = 224
+    Width = 133
+    Height = 33
+  end
+  object Label2: TLabel
+    Left = 128
+    Top = 32
+    Width = 253
+    Height = 25
+    Caption = 'Calculando Valor de Venda'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 32
+    Top = 88
+    Width = 117
+    Height = 17
+    Caption = 'Preco Produto'
+    Font.Charset = SYMBOL_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Technic'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 208
+    Top = 88
+    Width = 98
+    Height = 17
+    Caption = 'Percentual '
+    Font.Charset = SYMBOL_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Technic'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 120
+    Top = 192
+    Width = 124
+    Height = 17
+    Caption = 'Preco de venda'
+    Font.Charset = SYMBOL_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Technic'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object edtPreco: TEdit
+    Left = 32
+    Top = 128
+    Width = 121
+    Height = 21
+    TabOrder = 0
+  end
+  object edtPercentual: TEdit
+    Left = 192
+    Top = 128
+    Width = 121
+    Height = 21
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 344
+    Top = 124
+    Width = 137
+    Height = 29
+    Caption = 'Calcula Venda'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+end

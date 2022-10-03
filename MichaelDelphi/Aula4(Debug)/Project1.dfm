@@ -1,0 +1,88 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 370
+  ClientWidth = 554
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 48
+    Top = 40
+    Width = 321
+    Height = 23
+    Caption = 'Explorando o Debugger do Delphi'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object mmAtalhos: TMemo
+    Left = 22
+    Top = 69
+    Width = 211
+    Height = 140
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Swis721 Ex BT'
+    Font.Style = [fsBold]
+    Lines.Strings = (
+      'F7 - DEBUG  TRACE INTO'
+      'CTRL + F7 EVALUATE/MODIFY'
+      'F8 - DEBUG - STEP OVER'
+      'F9 - RUN'
+      'CTRL + F9 - COMPILE '
+      'PROJECT'
+      'F11 - OBJECT INSPECTOR'
+      'F12 - TOGGLE FROM/UNIT'
+      'CTRL +F12  - SEARCH UNITS')
+    ParentFont = False
+    TabOrder = 0
+  end
+  object mmAtalhos2: TMemo
+    Left = 257
+    Top = 69
+    Width = 240
+    Height = 140
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Swis721 Ex BT'
+    Font.Style = [fsBold]
+    Lines.Strings = (
+      'BREAKPOINTS - CTRL+ ALT + B'
+      ''
+      'CALL STACK - CTRL + ALT + S'
+      ''
+      'WATCHES - CTRL + ALT + W'
+      ''
+      'THREADS - CTRL + ALT + T')
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btnProcessar: TButton
+    Left = 160
+    Top = 224
+    Width = 177
+    Height = 25
+    Caption = 'Processar'
+    Font.Charset = SYMBOL_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Technic'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    OnClick = btnProcessarClick
+  end
+end

@@ -1,0 +1,93 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 425
+  ClientWidth = 581
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 64
+    Top = 32
+    Width = 447
+    Height = 33
+    Caption = 'CALCULADORA +DEVS2BLU - DELPHI'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 413
+    Top = 83
+    Width = 22
+    Height = 29
+    Caption = '='
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object CB: TComboBox
+    Left = 150
+    Top = 89
+    Width = 144
+    Height = 26
+    Color = clHighlightText
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    Items.Strings = (
+      'Somar'
+      'Subtrair'
+      'Multiplicar'
+      'Dividir'
+      'Resto'
+      'Divis'#227'o Inteira')
+  end
+  object Button1: TButton
+    Left = 216
+    Top = 144
+    Width = 121
+    Height = 49
+    Caption = 'CALCULAR'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object numerador: TEdit
+    Left = 38
+    Top = 88
+    Width = 103
+    Height = 26
+    TabOrder = 2
+  end
+  object denominador: TEdit
+    Left = 306
+    Top = 89
+    Width = 103
+    Height = 25
+    TabOrder = 3
+  end
+  object Resultado: TEdit
+    Left = 442
+    Top = 88
+    Width = 103
+    Height = 25
+    TabOrder = 4
+  end
+end

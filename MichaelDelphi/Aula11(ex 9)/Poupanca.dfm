@@ -1,0 +1,52 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 610
+  ClientWidth = 708
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lbJuros: TLabel
+    Left = 208
+    Top = 107
+    Width = 97
+    Height = 18
+  end
+  object Label1: TLabel
+    Left = 80
+    Top = 80
+    Width = 86
+    Height = 13
+    Caption = 'Valor Despositado'
+  end
+  object Label2: TLabel
+    Left = 208
+    Top = 80
+    Width = 105
+    Height = 13
+    Caption = 'Valor Apos 1 mes'
+  end
+  object edtPoupanca: TEdit
+    Left = 64
+    Top = 104
+    Width = 121
+    Height = 21
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 128
+    Top = 144
+    Width = 129
+    Height = 33
+    Caption = 'Button1'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+end

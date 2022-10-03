@@ -1,0 +1,69 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 433
+  ClientWidth = 524
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 80
+    Top = 32
+    Width = 349
+    Height = 35
+    Caption = 'Comandos de Repeti'#231#227'o'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -29
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object edtUM: TEdit
+    Left = 72
+    Top = 200
+    Width = 121
+    Height = 21
+    TabOrder = 0
+  end
+  object edtDois: TEdit
+    Left = 72
+    Top = 251
+    Width = 121
+    Height = 21
+    TabOrder = 1
+  end
+  object btnExecutar: TButton
+    Left = 207
+    Top = 216
+    Width = 114
+    Height = 33
+    Caption = 'Executar'
+    TabOrder = 2
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 64
+    Top = 73
+    Width = 257
+    Height = 105
+    Caption = 'RadioGroup1'
+    Font.Charset = SYMBOL_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'TechnicBold'
+    Font.Style = [fsBold]
+    Items.Strings = (
+      'For'
+      'While'
+      'Repeat')
+    ParentFont = False
+    TabOrder = 3
+  end
+end

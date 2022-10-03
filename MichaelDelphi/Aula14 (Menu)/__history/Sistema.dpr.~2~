@@ -1,0 +1,16 @@
+program Sistema;
+
+uses
+  Vcl.Forms,
+  uFmMenu in 'uFmMenu.pas' {fmSisetmaMenu},
+  uFrmCliente in 'uFrmCliente.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfmSisetmaMenu, fmSisetmaMenu);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

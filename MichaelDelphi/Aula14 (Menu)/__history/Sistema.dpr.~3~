@@ -1,0 +1,20 @@
+program Sistema;
+
+uses
+  Vcl.Forms,
+  uFmMenu in 'uFmMenu.pas' {fmSisetmaMenu},
+  uFrmCliente in 'uFrmCliente.pas' {fmClientes},
+  ufrmFornecedor in 'ufrmFornecedor.pas' {Form2},
+  uFrmProdutos in 'uFrmProdutos.pas' {fmProdutos};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfmSisetmaMenu, fmSisetmaMenu);
+  Application.CreateForm(TfmClientes, fmClientes);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TfmProdutos, fmProdutos);
+  Application.Run;
+end.

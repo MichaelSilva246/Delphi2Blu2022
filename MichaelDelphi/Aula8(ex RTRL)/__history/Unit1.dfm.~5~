@@ -1,0 +1,107 @@
+object tlResultado: TtlResultado
+  Left = 0
+  Top = 0
+  Caption = 'tlResultado'
+  ClientHeight = 562
+  ClientWidth = 609
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 32
+    Top = 56
+    Width = 360
+    Height = 29
+    Caption = 'Usando a RTL e Tipo de Dados'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbResultado: TLabel
+    Left = 72
+    Top = 272
+    Width = 105
+    Height = 17
+    Caption = 'Resultado'
+    Font.Charset = SYMBOL_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'TechnicBold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object btnInteiro: TButton
+    Left = 72
+    Top = 152
+    Width = 121
+    Height = 41
+    Caption = 'Inteiro'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Swis721 Blk BT'
+    Font.Style = [fsItalic]
+    ParentFont = False
+    TabOrder = 0
+    OnClick = btnInteiroClick
+  end
+  object btnDataExtenso: TButton
+    Left = 207
+    Top = 199
+    Width = 121
+    Height = 41
+    Caption = 'Data (Extenso)'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Swis721 Blk BT'
+    Font.Style = [fsItalic]
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btnData: TButton
+    Left = 72
+    Top = 199
+    Width = 121
+    Height = 41
+    Caption = 'Data'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Swis721 Blk BT'
+    Font.Style = [fsItalic]
+    ParentFont = False
+    TabOrder = 2
+  end
+  object btnPonto: TButton
+    Left = 207
+    Top = 152
+    Width = 121
+    Height = 41
+    Caption = 'Ponto Flutuante'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Swis721 Blk BT'
+    Font.Style = [fsItalic]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = btnPontoClick
+  end
+  object edtValor: TEdit
+    Left = 72
+    Top = 112
+    Width = 256
+    Height = 21
+    TabOrder = 4
+  end
+end

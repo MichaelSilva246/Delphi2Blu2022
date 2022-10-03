@@ -1,0 +1,71 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 281
+  ClientWidth = 418
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 48
+    Top = 40
+    Width = 329
+    Height = 23
+    Caption = 'Explorando o Debugger do Delphi'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object mmAtalhos: TMemo
+    Left = 22
+    Top = 80
+    Width = 185
+    Height = 113
+    Lines.Strings = (
+      'F7 - DEBUG  TRACE INTO'
+      'CTRL + F7 EVALUATE/MODIFY'
+      'F8 - DEBUG - STEP OVER'
+      'F9 - RUN'
+      'CTRL + F9 - COMPILE PROJECT'
+      'F11 - OBJECT INSPECTOR'
+      'F12 - TOGGLE FROM/UNIT'
+      'CTRL +F12  - SEARCH UNITS')
+    TabOrder = 0
+  end
+  object mmAtalhos2: TMemo
+    Left = 225
+    Top = 80
+    Width = 185
+    Height = 113
+    Lines.Strings = (
+      'BREAKPOINTS - CTRL+ ALT + B'
+      'CALL STACK - CTRL + ALT + S'
+      'WATCHES - CTRL + ALT + W'
+      'THREADS - CTRL + ALT + T')
+    TabOrder = 1
+  end
+  object btnProcessar: TButton
+    Left = 136
+    Top = 208
+    Width = 177
+    Height = 25
+    Caption = 'Processar'
+    Font.Charset = SYMBOL_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Technic'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+end

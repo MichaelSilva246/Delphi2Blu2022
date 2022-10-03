@@ -1,0 +1,32 @@
+unit exercicio3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    btnVar1: TEdit;
+    btnVar2: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.
+{Leia dois valores para as variaveis A e B, e efetue as trocas do valores
+de forma que a variavel a passe a possuir o valor da variavel B
+e a variavel B passe a possuir o valor da variavel A.
+Apresentar os valoers trocados}

@@ -1,0 +1,75 @@
+unit Dificil;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TServicoMilitar = array[1..3] of String;
+  TForm1 = class(TForm)
+    Button1: TButton;
+    lbResultado: TLabel;
+    procedure Button1Click(Sender: TObject);
+  private
+  procedure ServicoMilitar;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  self.ServicoMilitar;
+end;
+
+procedure TForm1.ServicoMilitar;
+var
+ xNome, xSexo: String;
+ xSaude: String;
+ xIdade, I: Integer;
+ xApto: TServicoMilitar;
+ xTotalAptos: Integer;
+
+begin
+  xTotalAptos := 0;
+
+  for I := 1 to 3 do
+  begin
+    xNome:= inputbox('Nome', 'Digite Seu Nome', '');
+    xSexo:= inputbox('Sexo', 'Digite F/M', '');
+    xSaude:= inputbox('Saude', 'Saude Ok? "S/N" ', '');
+    xIdade:= StrToInt(inputbox('Idade', 'Digite a Idade', ''));
+
+    if (AnsiUpperCase (xSexo) = 'M') and (AnsiUpperCase(xSaude) = 'S')
+                       and ( xIdade >= 18) then
+    begin
+      inc(xTotalAptos);
+      xApto[I] := xNome;
+    end;
+  end;
+
+  lbResultado.caption := 'Lista de Aptos';
+  for I := 1 to 3 do
+  begin
+    lbResultado.caption := lbResultado.caption + #10#13 + xApto[i];
+  end;
+
+
+end;
+
+
+end.
+{21. Escreva um algoritmo que leia os dados de “N” pessoas
+(nome, sexo, idade e saúde) e informe se está apta ou não
+para cumprir o serviço militar obrigatório. Informe os totais;

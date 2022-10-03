@@ -1,0 +1,66 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TdayTemperatures = array[1..31] of integer;
+  // TmonthTemps = array [1..31] of TDayTemperatures;
+  // TMatrizDinamica = array of string
+
+  TbtnConsultar = class(TForm)
+    btnGravar: TButton;
+    Button2: TButton;
+    mmHistorico: TMemo;
+    edtDia: TEdit;
+    edtTemperatura: TEdit;
+    procedure btnGravarClick(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+  private
+    { Private declarations }
+    FDayTemperatures: TDayTemperatures;
+  public
+    { Public declarations }
+  end;
+
+var
+  btnConsultar: TbtnConsultar;
+
+implementation
+
+{$R *.dfm}
+
+procedure TbtnConsultar.btnGravarClick(Sender: TObject);
+  var
+  xDia: Integer;
+  xTemperatura: Integer;
+begin
+  xDia := StrToIntDef(edtDia.Text, 0);
+  xTemperatura:= StrToIntDef(edtTemperatura.Text, 0) ;
+
+  FDayTemperatures[xDia] := xTemperatura;
+
+end;
+
+
+
+procedure TbtnConsultar.Button2Click(Sender: TObject);
+var
+  I: Integer;
+begin
+  mmHistorico.Lines.Clear;
+
+  for I := 1 to Length(FDayTemperatures) do
+  begin
+    if FDaytemperatures[I] >0  then
+      mmHistorico.Lines.Add('Dia ' + IntToStr(I) +
+                            'fez ' + intToStr(FDayTemperatures[I])+
+                            'graus.');
+  end;
+
+end;
+
+end.

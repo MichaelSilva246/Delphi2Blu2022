@@ -1,0 +1,84 @@
+unit CalculaVenda;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+   TForm1 = class(TForm)
+    btnCalcula: TButton;
+    lbPrecoFinal: TLabel;
+    procedure btnCalculaClick(Sender: TObject);
+  private
+  procedure AnoVeiculos;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+{ TForm1 }
+
+procedure TForm1.AnoVeiculos;
+const
+cCarroVelho = 0.12;
+cCarroNovo = 0.07;
+
+var
+  xResp: String;
+  xValorVeiculo, xAnoVeiculo,xValorTotalCompra,
+  xValorDesconto,xValorFinal: Double;
+
+begin
+  xValorFinal:= 0;
+  xValorDesconto:= 0;
+  xValorVeiculo:=0;
+  xValorTotalCompra:=0;
+    repeat
+      xValorVeiculo:= StrToFloat(inputbox('Valor', 'Digite o Valor do Veiculo', ''));
+      xAnoVeiculo:= StrToFloat(inputbox ('Valor', 'Digite o Ano do Veiculo', ''));
+
+      if xAnoVeiculo >= 2000 then
+      begin
+        xValorDesconto := xValorVeiculo * cCarroNovo ;
+        xValorFinal:= xValorVeiculo - xValorDesconto;
+        xValorTotalCompra:= xValorTotalCompra + xValorFinal;
+      end
+
+      else
+      begin
+        xValorDesconto := (xValorVeiculo * cCarroVelho)-(xValorVeiculo);
+        xValorFinal:= xValorVeiculo - xValorDesconto;
+        xValorTotalCompra:= xValorTotalCompra + xValorFinal;
+      end;
+
+        xResp:= inputbox('Continuar',' Digite S/N ', 'N');
+    until xResp = 'n';
+
+    lbPrecoFinal.Caption:= ('O Valor Total Foi de' +FloatToStr(xValorFinal));
+end;
+
+
+procedure TForm1.btnCalculaClick(Sender: TObject);
+begin
+  self.AnoVeiculos;
+end;
+
+end.
+{. A concessionária de veículos “CARANGO VELHO” está vendendo os seus
+veículos com desconto. Faça um algoritmo que calcule e exiba o valor
+do desconto e o valor a ser pago pelo cliente de vários carros.
+
+O desconto deverá ser calculado de acordo com o ano do veículo.
+Até 2000 - 12% e acima de 2000 - 7%. O sistema deverá perguntar se
+deseja continuar calculandodesconto até que a resposta seja:
+“(N) Não”. Informar total de carros com ano até 2000 e total geral;
