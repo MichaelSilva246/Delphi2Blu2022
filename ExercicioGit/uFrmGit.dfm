@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 405
-  ClientWidth = 539
+  ClientHeight = 321
+  ClientWidth = 467
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,8 +16,8 @@ object Form1: TForm1
   object lbResultado: TLabel
     Left = 200
     Top = 248
-    Width = 225
-    Height = 97
+    Width = 3
+    Height = 13
   end
   object Label2: TLabel
     Left = 72
@@ -35,9 +35,22 @@ object Form1: TForm1
   object Label1: TLabel
     Left = 264
     Top = 207
-    Width = 81
+    Width = 50
     Height = 23
     Caption = 'Valor'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 72
+    Top = 136
+    Width = 89
+    Height = 23
+    Caption = 'Desconto'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
@@ -56,27 +69,37 @@ object Form1: TForm1
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
+    ItemIndex = 0
     Items.Strings = (
       'Resid'#234'ncia'
       'Com'#233'rcio'
-      'Ind'#250'stria')
+      'Ind'#250'stria'
+      'Fazenda')
     ParentFont = False
-    TabOrder = 0
+    TabOrder = 1
+    TabStop = True
   end
   object edtConsumo: TEdit
-    Left = 64
-    Top = 96
+    Left = 72
+    Top = 85
     Width = 121
     Height = 21
-    TabOrder = 1
+    TabOrder = 0
   end
   object Button1: TButton
-    Left = 64
-    Top = 160
-    Width = 107
+    Left = 72
+    Top = 206
+    Width = 121
     Height = 33
     Caption = 'Calcula'
-    TabOrder = 2
+    TabOrder = 3
     OnClick = Button1Click
+  end
+  object edtDesconto: TEdit
+    Left = 72
+    Top = 165
+    Width = 121
+    Height = 21
+    TabOrder = 2
   end
 end
