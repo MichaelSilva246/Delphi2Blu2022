@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
-  TConsumo = (Residencia, Comercio , Industria);
+  TConsumo = (Residencia, Comercio , Industria, Fazenda);
 
   TForm1 = class(TForm)
     rdImovel: TRadioGroup;
@@ -16,6 +16,8 @@ type
     Label2: TLabel;
     Button1: TButton;
     Label1: TLabel;
+    Label3: TLabel;
+    edtDesconto: TEdit;
     procedure Button1Click(Sender: TObject);
   private
   procedure CalculaKw;
@@ -44,23 +46,32 @@ const
   cResidencia = 0.60;
   cComercio   = 0.48;
   cIndustria  = 1.29;
+  cFazenda    = 2.18;
 
 begin
 
 
   case TConsumo(rdImovel.ItemIndex) of
-
     Residencia:
     begin
-      lbResultado.Caption :='Seu Consumo foi de: '+ FloatToStr( StrToFloat(edtConsumo.text) * cResidencia);
+      lbResultado.Caption := 'Seu Consumo foi de: ' + FormatFloat
+                            ('0.00', (StrToFloat(edtConsumo.text) * cResidencia)- StrToFloatDef(edtDesconto.Text, 0));
     end;
     Comercio:
     begin
-       lbResultado.Caption :='Seu Consumo foi de: '+ FloatToStr( StrToFloat(edtConsumo.text) * cComercio);
+       lbResultado.Caption := 'Seu Consumo foi de: ' + FormatFloat
+                             ('0.00', (StrToFloat(edtConsumo.text) * cComercio)- StrToFloatDef(edtDesconto.Text, 0));
+
     end;
     Industria:
     begin
-      lbResultado.Caption :='Seu Consumo foi de: '+ FloatToStr( StrToFloat(edtConsumo.text) * cIndustria);
+      lbResultado.Caption := 'Seu Consumo foi de: ' + FormatFloat
+                            ('0.00', (StrToFloat(edtConsumo.text) * cIndustria)- StrToFloatDef(edtDesconto.Text, 0));
+    end;
+    Fazenda:
+    begin
+      lbResultado.Caption := 'Seu Consumo foi de: ' + FormatFloat
+                            ('0.00', (StrToFloat(edtConsumo.text) * cFazenda)- StrToFloatDef(edtDesconto.Text, 0));
     end;
   end;
 
