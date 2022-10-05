@@ -43,10 +43,10 @@ end;
 
 procedure TForm1.CalculaKw;
 const
-  cResidencia = 0.60;
-  cComercio   = 0.48;
-  cIndustria  = 1.29;
-  cFazenda    = 2.18;
+  cResidencia = 0.80;
+  cComercio   = 0.68;
+  cIndustria  = 1.49;
+  cFazenda    = 3.18;
 
 begin
 
@@ -84,3 +84,5 @@ da conta de luz segue a tabela abaixo:
     a. (Residência) 0,60;
     b. (Comércio) 0,48;
     c. (Indústria) 1,29.}
+
+    // Exemplo de Format Float e Convertendo e desconvertendo dentro do mesmo
