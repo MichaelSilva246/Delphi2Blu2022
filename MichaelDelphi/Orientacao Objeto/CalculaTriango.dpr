@@ -2,7 +2,8 @@ program CalculaTriango;
 
 uses
   Vcl.Forms,
-  uFrmOrientacao in 'uFrmOrientacao.pas' {Form1};
+  uFrmOrientacao in 'uFrmOrientacao.pas' {Form1},
+  UTriangulo in 'UTriangulo.pas';
 
 {$R *.res}
 

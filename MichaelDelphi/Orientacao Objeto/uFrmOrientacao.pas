@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UTriangulo;
 
 type
   TForm1 = class(TForm)
@@ -28,8 +28,10 @@ type
     Label7: TLabel;
     Label8: TLabel;
     procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     procedure CalculaArea;
+    procedure CalculaAreaOOP;
     { Private declarations }
   public
     { Public declarations }
@@ -45,6 +47,11 @@ implementation
 uses Math;
 
 { TForm1 }
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  self.CalculaAreaOOP;
+end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
@@ -79,8 +86,8 @@ begin
   if xResultadoX > xResultadoY then
     begin
       lbResultado.caption  := 'O Triangulo X é Maior!';
-    end;
-  if xResultadoX < xResultadoY then
+    end
+  else if xResultadoX < xResultadoY then
     begin
       lbResultado.caption  := 'O Triangulo Y é Maior!';
     end
@@ -89,7 +96,50 @@ begin
        lbResultado.caption  := 'Os Triangulos tem o mesmo Valor!';
     end;
 
+end;
 
+procedure TForm1.CalculaAreaOOP;
+var
+  xTrianguloX: Ttriangulo;
+  xTrianguloY: Ttriangulo;
+
+  xAreaX: Double;
+  xAreaY: Double;
+
+begin
+  xTrianguloX := TTriangulo.Create;
+  xTrianguloY := TTriangulo.Create;
+
+  try
+      //Triangulo X
+     xTrianguloX.a := StrToFloatDef(edtA.Text,0);
+     xTrianguloX.b := StrToFloatDef(edtB.Text,0);
+     xTrianguloX.c := StrToFloatDef(edtC.Text,0);
+
+     xAreaX := xTrianguloX.Area;
+
+     //Triangulo Y
+     xTrianguloY.a := StrToFloatDef(edtD.Text,0);
+     xTrianguloY.b := StrToFloatDef(edtE.Text,0);
+     xTrianguloY.c := StrToFloatDef(edtF.Text,0);
+
+     xAreaY := xTrianguloY.Area;
+
+     lbTrianguloX.caption := 'Triangulo X Area : ' +FormatFloat('0.000' ,xAreaX );
+     lbTrianguloY.caption := 'Triangulo Y Area : ' +FormatFloat('0.000' ,xAreaY );
+
+     if(xAreaX > xAreaY) then
+      lbResultado.caption := 'O Triangulo X é Maior!'
+     else if (xAreaX < xAreaY) then
+      lbResultado.caption := 'O Triangulo Y é Maior!'
+     else
+      lbResultado.caption  := 'Os Triangulos tem o mesmo Valor!';
+
+  finally
+    FreeAndNil(xTrianguloX);
+    FreeAndNil(xTrianguloY);
+
+  end;
 
 
 
