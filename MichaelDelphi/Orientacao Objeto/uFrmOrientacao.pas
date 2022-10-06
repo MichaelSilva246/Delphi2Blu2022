@@ -73,23 +73,20 @@ begin
   xResultadoY   := Sqrt(xMedidaTotalY*(xMedidaTotalY-xMedidaA)
                 *(xMedidaTotalY-xMedidaB) *(xMedidaTotalY-xMedidaC));
 
+  lbTrianguloX.caption := 'Triangulo X Área: '+FormatFloat('0.000' ,xResultadoX);
+  lbTrianguloY.caption := 'Triangulo Y Área: '+FormatFloat('0.000' ,xResultadoY);
+
   if xResultadoX > xResultadoY then
     begin
-      lbTrianguloX.caption := 'Triangulo X Área: '+FormatFloat('0.000' ,xResultadoX);
-      lbTrianguloY.caption := 'Triangulo Y Área: '+FormatFloat('0.000' ,xResultadoY);
       lbResultado.caption  := 'O Triangulo X é Maior!';
     end;
   if xResultadoX < xResultadoY then
     begin
-      lbTrianguloX.caption := 'Triangulo X Área: '+FormatFloat('0.000', xResultadoX);
-      lbTrianguloY.caption := 'Triangulo Y Área: '+FormatFloat('0.000', xResultadoY);
       lbResultado.caption  := 'O Triangulo Y é Maior!';
     end
   else
     begin
-      lbTrianguloX.caption := 'Triangulo X Área: '+FormatFloat('0.000', xResultadoX);
-      lbTrianguloY.caption := 'Triangulo Y Área: '+FormatFloat('0.000', xResultadoY);
-      lbResultado.caption  := 'Os Triangulos tem o mesmo Valor!';
+       lbResultado.caption  := 'Os Triangulos tem o mesmo Valor!';
     end;
 
 
