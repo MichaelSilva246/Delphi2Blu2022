@@ -1,0 +1,84 @@
+unit Pessoa;
+
+interface
+
+type
+
+  TPessoa = class
+    private
+      FNome: String;
+      FNascimento : TDate;
+      FAltura : Double;
+    function GetNome: String;
+    procedure SetNome(const aValue: String);
+    function GetAltura: Double;
+    function GetNascimento: TDate;
+    procedure SetAltura(const aValue: Double);
+    procedure SetNascimento(const aValue: TDate);
+
+    public
+      function RetornaPessoa: String;
+      property Nome: String read GetNome write SetNome;
+      property Nascimento: TDate read GetNascimento write SetNascimento;
+      property Altura: Double read GetAltura write SetAltura;
+      function CalculaIdade: Double;
+
+
+end;
+
+
+implementation
+
+uses
+  sysutils;
+
+{ TPessoa }
+
+function TPessoa.CalculaIdade: Double;
+begin
+  Result := Date - (FNascimento);
+end;
+
+function TPessoa.GetAltura: Double;
+begin
+  Result := FAltura;
+end;
+
+function TPessoa.GetNascimento: TDate;
+begin
+  Result := Fnascimento;
+end;
+
+function TPessoa.GetNome: String;
+begin
+  Result := FNome;
+end;
+
+
+function TPessoa.RetornaPessoa: String;
+
+begin
+  Result := Fnome+': Nascido em : '+DateToStr(FNascimento)+' Altura :'+FloatToStr(Faltura)+' Idade '+DateToStr(CalculaIdade);
+end;
+
+procedure TPessoa.SetAltura(const aValue: Double);
+begin
+  FAltura := aValue;
+end;
+
+procedure TPessoa.SetNascimento(const aValue: TDate);
+begin
+  FNascimento := aValue;
+end;
+
+procedure TPessoa.SetNome(const aValue: String);
+begin
+  FNome := aValue;
+end;
+
+end.
+
+{Crie os métodos  públicos necessários para getters e setters
+ e também um método para imprimir todos dados de uma pessoa.
+
+ Crie um método para calcular a idade da pessoa.   }
