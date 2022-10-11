@@ -10,10 +10,10 @@ uses
 
 type
   TForm1 = class(TForm)
-    Button1: TButton;
+    btnAlteraNome: TButton;
     Button6: TButton;
     mmSaldo: TMemo;
-    Button3: TButton;
+    btnOk: TButton;
     edtConta: TEdit;
     edtNome: TEdit;
     edtSaldo: TEdit;
@@ -25,9 +25,17 @@ type
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
+    edtNovoNome: TEdit;
+    lbConta: TLabel;
+    procedure btnOkClick(Sender: TObject);
+    procedure btnAlteraNomeClick(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
-    FContaCorrente : TContaCorrente;
-    { Private declarations }
+   FContaCorrente : TContaCorrente;
+  procedure CriaConta;
+  procedure ExibeConta;
+      { Private declarations }
   public
     { Public declarations }
   end;
@@ -43,6 +51,47 @@ implementation
 { TForm1 }
 
 
+procedure TForm1.btnAlteraNomeClick(Sender: TObject);
+begin
+  FcontaCorrente.AlteraNome(edtNovoNome.text);
+  ExibeConta;
+end;
+
+procedure TForm1.btnOkClick(Sender: TObject);
+begin
+  (FContaCorrente.SaqueDeposito(FContaCorrente.saldo,
+      StrToCurrDef(edtSaque.text, 0), StrToCurrDef(edtDeposito.text, 0)));
+   mmSaldo.lines.add(CurrToStr(FContaCorrente.Saldo)+ ' Saldo ');
+   ExibeConta;
+end;
+
+procedure TForm1.Button6Click(Sender: TObject);
+begin
+  CriaConta; ExibeConta;
+  edtDeposito.Enabled := True;
+  edtSaque.Enabled := True;
+  edtNovoNome.Enabled := True;
+  btnOk.Enabled := True;
+  btnAlteraNome.Enabled := True;
+  edtNovoNome.Enabled := True;
+end;
+
+procedure TForm1.CriaConta;
+begin
+   FContaCorrente := TContaCorrente.Create(StrToInt(edtConta.text),
+     edtNome.Text, StrToCurrDef(edtSaldo.Text, 0));
+end;
+
+procedure TForm1.ExibeConta;
+begin
+  lbConta.caption := (' Conta Nº : ' +IntToStr(FContaCorrente.FNumConta)+ #10#13 +
+                '  Nome: ' +(FContaCorrente.Nome)+ #10#13 + ' Saldo : '+CurrToStr(FContaCorrente.Saldo));
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FreeAndNil(FContaCorrente);
+end;
 
 end.
 
@@ -54,3 +103,4 @@ end.
    Os métodos são os seguintes: alterarNome, depósito e saque;
    No construtor, saldo é opcional, com valor default zero
    e os demais atributos são obrigatórios.}
+

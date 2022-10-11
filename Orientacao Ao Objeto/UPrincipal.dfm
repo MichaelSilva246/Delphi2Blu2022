@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 416
-  ClientWidth = 571
+  ClientHeight = 492
+  ClientWidth = 655
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -79,10 +80,10 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label6: TLabel
-    Left = 356
-    Top = 42
+    Left = 352
+    Top = 109
     Width = 125
-    Height = 19
+    Height = 22
     Caption = 'Historico Conta'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -91,13 +92,28 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object Button1: TButton
+  object lbConta: TLabel
+    Left = 392
+    Top = 16
+    Width = 57
+    Height = 18
+    Caption = 'lbConta'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object btnAlteraNome: TButton
     Left = 288
-    Top = 357
+    Top = 387
     Width = 249
     Height = 51
     Caption = 'Alterar Nome'
+    Enabled = False
     TabOrder = 0
+    OnClick = btnAlteraNomeClick
   end
   object Button6: TButton
     Left = 184
@@ -106,21 +122,25 @@ object Form1: TForm1
     Height = 140
     Caption = 'Criar Conta'
     TabOrder = 1
+    OnClick = Button6Click
   end
   object mmSaldo: TMemo
-    Left = 264
-    Top = 96
+    Left = 272
+    Top = 137
     Width = 299
     Height = 225
+    ScrollBars = ssVertical
     TabOrder = 2
   end
-  object Button3: TButton
+  object btnOk: TButton
     Left = 189
     Top = 288
     Width = 69
     Height = 120
     Caption = 'Ok'
+    Enabled = False
     TabOrder = 3
+    OnClick = btnOkClick
   end
   object edtConta: TEdit
     Left = 24
@@ -148,6 +168,7 @@ object Form1: TForm1
     Top = 387
     Width = 142
     Height = 21
+    Enabled = False
     TabOrder = 7
   end
   object edtSaque: TEdit
@@ -155,6 +176,15 @@ object Form1: TForm1
     Top = 313
     Width = 142
     Height = 21
+    Enabled = False
     TabOrder = 8
+  end
+  object edtNovoNome: TEdit
+    Left = 344
+    Top = 444
+    Width = 121
+    Height = 21
+    Enabled = False
+    TabOrder = 9
   end
 end
