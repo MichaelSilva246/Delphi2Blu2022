@@ -1,0 +1,63 @@
+unit UContaCorrent;
+
+interface
+
+  Type
+  TContaCorrente = class
+    FNumConta : Integer;
+    FNome   : String;
+    FSaldo  : Currency;
+
+  private
+    function GetNome: String;
+    function GetNumConta: Integer;
+    function GetSaldo: Currency;
+
+    procedure SetNome(const aValue: String);
+    procedure SetNumConta(const aValue: Integer);
+    procedure SetSaldo(const aValue: Currency);
+
+  public
+    property Nome    : String   read GetNome     write SetNome;
+    property NumConta: Integer  read GetNumConta write SetNumConta;
+    property Saldo   : Currency read GetSaldo    write SetSaldo;
+
+  end;
+
+
+
+implementation
+
+{ TContaCorrente }
+
+function TContaCorrente.GetNome: String;
+begin
+  Result := FNome;
+end;
+
+function TContaCorrente.GetNumConta: Integer;
+begin
+  Result := FNumConta;
+end;
+
+function TContaCorrente.GetSaldo: Currency;
+begin
+  Result := FSaldo;
+end;
+
+procedure TContaCorrente.SetNome(const aValue: String);
+begin
+  FNome := aValue;
+end;
+
+procedure TContaCorrente.SetNumConta(const aValue: Integer);
+begin
+  FNumConta := aValue;
+end;
+
+procedure TContaCorrente.SetSaldo(const aValue: Currency);
+begin
+  FSaldo := aValue;
+end;
+
+end.

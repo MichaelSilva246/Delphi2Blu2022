@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/05 21:19:00.000.310,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/10 20:15:05.543,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/10 20:16:15.602,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/10 20:16:59.745,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Orientacao Ao Objeto\UContaCorrent.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/10 20:17:09.023,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Orientacao Ao Objeto\UPrincipal.dfm=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/10 20:17:09.023,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Orientacao Ao Objeto\UPrincipal.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/10 20:17:16.125,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Orientacao Ao Objeto\ContaCorrenet.dproj=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/10/10 21:42:20.708,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Orientacao Ao Objeto\UcontaCorrente.pas=C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Orientacao Ao Objeto\UContaCorrent.pas</Transaction>
+  </Transactions>
+</BorlandProject>

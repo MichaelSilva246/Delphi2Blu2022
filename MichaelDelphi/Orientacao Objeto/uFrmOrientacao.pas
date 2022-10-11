@@ -112,16 +112,16 @@ begin
 
   try
       //Triangulo X
-     xTrianguloX.a := StrToFloatDef(edtA.Text,0);
-     xTrianguloX.b := StrToFloatDef(edtB.Text,0);
-     xTrianguloX.c := StrToFloatDef(edtC.Text,0);
+     xTrianguloX.A := StrToFloatDef(edtA.Text,0);
+     xTrianguloX.B := StrToFloatDef(edtB.Text,0);
+     xTrianguloX.C := StrToFloatDef(edtC.Text,0);
 
      xAreaX := xTrianguloX.Area;
 
      //Triangulo Y
-     xTrianguloY.a := StrToFloatDef(edtD.Text,0);
-     xTrianguloY.b := StrToFloatDef(edtE.Text,0);
-     xTrianguloY.c := StrToFloatDef(edtF.Text,0);
+     xTrianguloY.A := StrToFloatDef(edtD.Text,0);
+     xTrianguloY.B := StrToFloatDef(edtE.Text,0);
+     xTrianguloY.C := StrToFloatDef(edtF.Text,0);
 
      xAreaY := xTrianguloY.Area;
 

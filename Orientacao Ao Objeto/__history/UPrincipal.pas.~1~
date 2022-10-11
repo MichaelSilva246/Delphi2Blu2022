@@ -1,0 +1,33 @@
+unit UPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TForm1 = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.
+
+
+{2. Crie uma classe para implementar uma ContaCorrente.
+   A classe deve possuir os seguintes atributos:
+  número da conta, nome do correntista e saldo.
+
+   Os métodos são os seguintes: alterarNome, depósito e saque;
+   No construtor, saldo é opcional, com valor default zero
+   e os demais atributos são obrigatórios.}
