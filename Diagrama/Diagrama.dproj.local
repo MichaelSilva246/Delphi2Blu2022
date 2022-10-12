@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/05 21:19:00.000.310,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/11 21:12:56.117,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/11 21:13:08.861,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/11 21:13:27.475,C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\UPessoa.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/11 21:13:34.121,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/11 21:13:42.423,C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\UPessoaFisica.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/11 21:13:48.913,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/11 21:14:00.664,C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\UpessoaJuridica.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/11 21:14:39.717,C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\uFrmPrincipal.dfm=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/11 21:14:39.717,C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\uFrmPrincipal.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/11 21:15:11.910,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Diagrama\UpessoaJuridica.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\UpessoaJuridica.pas</Transaction>
+    <Transaction>2022/10/11 21:15:13.287,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Diagrama\UPessoaFisica.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\UPessoaFisica.pas</Transaction>
+    <Transaction>2022/10/11 21:15:14.351,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Diagrama\UPessoa.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\UPessoa.pas</Transaction>
+    <Transaction>2022/10/11 21:15:15.428,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Diagrama\uFrmPrincipal.dfm=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\uFrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/11 21:15:15.428,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Diagrama\uFrmPrincipal.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\uFrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/11 21:15:22.233,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Diagrama\Diagrama.dproj=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

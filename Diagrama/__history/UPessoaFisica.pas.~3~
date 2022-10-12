@@ -1,0 +1,22 @@
+unit UPessoaFisica;
+
+interface
+uses
+  UPessoa;
+
+  type
+    TpessoaFisica = class (TPessoa)
+
+    private
+     FCPF   : String;
+     FIdade : Integer;
+
+    public
+
+  end;
+
+implementation
+
+{ TpessoaFisica }
+
+

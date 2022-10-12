@@ -4,11 +4,13 @@ interface
 
   Type
   TContaCorrente = class
+
+
+  private
     FNumConta : Integer;
     FNome   : String;
     FSaldo  : Currency;
 
-  private
     function GetNome: String;
     function GetNumConta: Integer;
     function GetSaldo: Currency;

@@ -1,4 +1,4 @@
-unit UContaCorrent;
+unit UcontaCorrente;
 
 interface
 
@@ -26,9 +26,7 @@ interface
 
 
     procedure AlteraNome(const aValue: String);
-    function Deposito  : currency;
-    function Saque     : currency;
-
+    procedure SaqueDeposito (const aSaldo: Currency; const aSaque: Currency; aDeposito: Currency);
     constructor Create(const aNumConta: Integer; const aNome: String; const aSaldo: Currency = 0);
 
 
@@ -46,23 +44,13 @@ begin
 end;
 
 constructor TContaCorrente.Create(const aNumConta: Integer; const aNome: String;
-  const aSaldo: Currency);
+  const aSaldo: Currency = 0);
 begin
   FNumConta := aNumconta;
   Fnome     := aNome;
   FSaldo    := aSaldo;
 end;
 
-function TContaCorrente.Deposito: currency;
-begin
-  Result := Saldo + Deposito;
-end;
-
-
-function TContaCorrente.Saque: currency;
-begin
-  Result := Saldo - Saque;
-end;
 
 function TContaCorrente.GetNome: String;
 begin
@@ -79,6 +67,12 @@ begin
   Result := FSaldo;
 end;
 
+
+procedure TContaCorrente.SaqueDeposito(const aSaldo: currency; const aSaque: Currency;
+  aDeposito: Currency);
+begin
+  Saldo := (aSaldo + aSaque) - aDeposito;
+end;
 
 procedure TContaCorrente.SetNome(const aValue: String);
 begin
