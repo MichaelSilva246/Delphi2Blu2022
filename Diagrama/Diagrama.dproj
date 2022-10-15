@@ -103,8 +103,8 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="UPessoa.pas"/>
-        <DCCReference Include="UPessoaFisica.pas"/>
         <DCCReference Include="UpessoaJuridica.pas"/>
+        <DCCReference Include="UPessoaFisica.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

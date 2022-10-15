@@ -13,4 +13,114 @@ object Form1: TForm1
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 80
+    Top = 83
+    Width = 47
+    Height = 19
+    Caption = 'Nome'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 80
+    Top = 135
+    Width = 75
+    Height = 19
+    Caption = 'Endereco'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 80
+    Top = 239
+    Width = 94
+    Height = 19
+    Caption = 'Idade ou IE'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 82
+    Top = 187
+    Width = 92
+    Height = 19
+    Caption = 'CPF / CNPJ'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object edtNome: TEdit
+    Left = 80
+    Top = 108
+    Width = 161
+    Height = 21
+    TabOrder = 0
+  end
+  object edtEndereco: TEdit
+    Left = 80
+    Top = 160
+    Width = 161
+    Height = 21
+    TabOrder = 1
+  end
+  object edtIdade: TEdit
+    Left = 80
+    Top = 264
+    Width = 161
+    Height = 21
+    TabOrder = 3
+  end
+  object edtCPF: TEdit
+    Left = 80
+    Top = 212
+    Width = 161
+    Height = 21
+    TabOrder = 2
+  end
+  object btnOK: TButton
+    Left = 288
+    Top = 229
+    Width = 105
+    Height = 46
+    Caption = 'btnOK'
+    TabOrder = 4
+    OnClick = btnOKClick
+  end
+  object mmDados: TMemo
+    Left = 82
+    Top = 308
+    Width = 250
+    Height = 177
+    Lines.Strings = (
+      '')
+    ScrollBars = ssBoth
+    TabOrder = 5
+  end
+  object rdPessoa: TRadioGroup
+    Left = 263
+    Top = 101
+    Width = 185
+    Height = 105
+    Caption = 'rdPessoa'
+    Items.Strings = (
+      'Pessoa Fisica'
+      'Pessoa Juridica')
+    TabOrder = 6
+  end
 end

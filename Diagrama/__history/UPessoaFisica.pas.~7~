@@ -1,0 +1,52 @@
+unit UPessoaFisica;
+
+
+interface
+uses
+  UPessoa;
+
+  type
+    TpessoaFisica = class(TPessoa)
+
+    private
+      FCPF   : String;
+      FIdade : Integer;
+
+      function GetCPF: String;
+      function GetIdade: Integer;
+
+      procedure SetCPF(const aValue: String);
+      procedure SetIdade(const aValue: Integer);
+
+    public
+
+      property CPF : String read GetCPF  write SetCPF;
+      property Idade  : Integer read GetIdade  write SetIdade;
+
+    end;
+
+implementation
+
+{ TpessoaFisica }
+
+function TpessoaFisica.GetCPF: String;
+begin
+   Result := FCPF;
+end;
+
+function TpessoaFisica.GetIdade: Integer;
+begin
+  Result := FIdade;
+end;
+
+procedure TpessoaFisica.SetCPF(const aValue: String);
+begin
+  FCPF := aValue;
+end;
+
+procedure TpessoaFisica.SetIdade(const aValue: Integer);
+begin
+  FIdade := aValue;
+end;
+
+end.

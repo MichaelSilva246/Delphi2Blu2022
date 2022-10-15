@@ -4,8 +4,8 @@ uses
   Vcl.Forms,
   uFrmPrincipal in 'uFrmPrincipal.pas' {Form1},
   UPessoa in 'UPessoa.pas',
-  UPessoaFisica in 'UPessoaFisica.pas',
-  UpessoaJuridica in 'UpessoaJuridica.pas';
+  UpessoaJuridica in 'UpessoaJuridica.pas',
+  UPessoaFisica in 'UPessoaFisica.pas';
 
 {$R *.res}
 

@@ -1,0 +1,53 @@
+unit UpessoaJuridica;
+
+interface
+uses
+  UPessoa;
+
+
+  type
+    TPessoJuridica = class(TPessoa)
+
+   private
+    FNCPJ  : String;
+    aFIE   : String;
+
+    function GetCNPJ: String;
+    function GetIe: String;
+
+    procedure SetCNPJ(const aValue: String);
+    procedure SetIe(const aValue: String);
+
+   public
+     property CNPJ : String  read GetCNPJ  write SetCNPJ;
+     property IE   : String  read GetIe    write SetIe;
+
+  end;
+
+implementation
+uses
+ SysUtils;
+
+{ TPessoJuridica }
+
+function TPessoJuridica.GetCNPJ: String;
+begin
+  Result := FNCPJ;
+end;
+
+function TPessoJuridica.GetIe: String;
+begin
+  Result := aFIE;
+end;
+
+procedure TPessoJuridica.SetCNPJ(const aValue: String);
+begin
+  FNCPJ := aValue;
+end;
+
+procedure TPessoJuridica.SetIe(const aValue: String);
+begin
+  aFIE := aValue;
+end;
+
+end.

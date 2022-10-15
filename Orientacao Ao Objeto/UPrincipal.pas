@@ -84,7 +84,7 @@ end;
 
 procedure TForm1.ExibeConta;
 begin
-  lbConta.caption := (' Conta Nº : ' +IntToStr(FContaCorrente.FNumConta)+ #10#13 +
+  lbConta.caption := (' Conta Nº : ' +IntToStr(FContaCorrente.NumConta)+ #10#13 +
                 '  Nome: ' +(FContaCorrente.Nome)+ #10#13 + ' Saldo : '+CurrToStr(FContaCorrente.Saldo));
 end;
 

@@ -6,16 +6,18 @@ interface
     Fnome     : String;
     FEndereco : String;
 
-    private
+   private
     function GetEndereco: String;
     function GetNome: String;
 
     procedure SetEndereco(const aValue: String);
     procedure SetNome(const aValue: String);
 
-    public
-     property Nome     : String   read GetNome     write SetNome;
-     property Endereco : String   read GetEndereco write SetEndereco;
+   public
+
+    property Nome     : String   read GetNome     write SetNome;
+    property Endereco : String   read GetEndereco write SetEndereco;
+    constructor Create(const aNome: String; const aEnd: String);
 
 
   end;
@@ -24,6 +26,12 @@ implementation
 
 { TPessoa }
 
+constructor TPessoa.Create(const aNome, aEnd: String);
+begin
+  Fnome     := aNome;
+  fEndereco := aEnd;
+end;
+
 function TPessoa.GetEndereco: String;
 begin
   Result := FEndereco;
@@ -31,7 +39,7 @@ end;
 
 function TPessoa.GetNome: String;
 begin
-  Result := FEndereco;
+  Result := Fnome;
 end;
 
 procedure TPessoa.SetEndereco(const aValue: String);
@@ -43,5 +51,6 @@ procedure TPessoa.SetNome(const aValue: String);
 begin
   FEndereco := aValue;
 end;
+
 
 end.
