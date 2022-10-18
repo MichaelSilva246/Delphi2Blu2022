@@ -1,0 +1,121 @@
+unit UBombaCombustivel;
+
+interface
+  Type
+    TBomba = class
+    private
+      FTipoCombustivel : String;
+      FValorPorLitro : Currency;
+      FQuantidadeNaBomba: Double;
+
+    procedure SetTipoCombustivel(const Value: String);
+    procedure SetValorPorLitro(const Value: Currency);
+    procedure SetQuantidadeBomba(const Value: Double);
+
+    function GetTipoCombustivel: String;
+    function GetValorPorLitro: Currency;
+    function GetQuantidadeBomba: Double;
+
+   public
+
+    property TipoCombustivel   : String   read GetTipoCombustivel  write SetTipoCombustivel;
+    property ValorPorLitro     : Currency read GetValorPorLitro    write SetValorPorLitro;
+    property Quantidade        : Double   read GetQuantidade       write SetQuantidade;
+    property QuantidadeNaBomba : Double   read GetQuantidadeBomba  write SetQuantidadeBomba;
+
+    procedure GravaPessoa; virtual; abstract;
+
+    function abastecePorValor(const aValue: Currency): Double;
+    function abastecerPorLitro: Currency ;
+    procedure alterarCombustivel(const aValue: String);
+    procedure alterarValor(const aValue: Currency);
+    procedure alterarQuantidadeCombustivel(const aValue: Double);
+
+   constructor Create(const aValorPorLitro: Currency; const aQuantidadeNaBomba: Double;
+                               const aTipoCombustivel: String);
+  end;
+
+
+
+implementation
+
+{ TBomba }
+
+
+function TBomba.abastecePorValor(const aValue: Currency): Double;
+begin
+  Result := aValue / ValorPorLitro;
+end;
+
+function TBomba.abastecerPorLitro: Currency;
+begin
+  Result := Quantidade * ValorPorLitro;
+end;
+
+procedure TBomba.alterarCombustivel(const aValue: String);
+begin
+  TipoCombustivel := aValue;
+end;
+
+procedure TBomba.alterarQuantidadeCombustivel(const aValue: Double);
+begin
+  QuantidadeNaBomba := aValue;
+end;
+
+procedure TBomba.alterarValor(const aValue: Currency);
+begin
+  ValorPorLitro := aValue;
+end;
+
+constructor TBomba.Create(const aValorPorLitro: Currency;
+  const aQuantidadeNaBomba: Double; const aTipoCombustivel: String);
+begin
+  ValorPorLitro := aValorPorLitro;
+  QuantidadeNaBomba := aQuantidadeNaBomba;
+  TipoCombustivel := aTipoCombustivel;
+end;
+
+function TBomba.GetQuantidade: Double;
+begin
+  Result := FValorPorLitro;
+end;
+
+function TBomba.GetQuantidadeBomba: Double;
+begin
+  Result := FQuantidadeNaBomba;
+end;
+
+function TBomba.GetTipoCombustivel: String;
+begin
+  Result := FTipoCombustivel;
+end;
+
+function TBomba.GetValorPorLitro: Currency;
+begin
+  Result := FValorPorLitro;
+end;
+
+procedure TBomba.SetQuantidade(const Value: Double);
+begin
+  FQuantidade := Value;
+end;
+
+procedure TBomba.SetQuantidadeBomba(const Value: Double);
+begin
+  FQuantidadeNaBomba := Value;
+end;
+
+procedure TBomba.SetTipoCombustivel(const Value: String);
+begin
+  FTipoCombustivel := Value;
+end;
+
+procedure TBomba.SetValorPorLitro(const Value: Currency);
+begin
+  FValorPorLitro := Value;
+end;
+
+end.
+
+
+

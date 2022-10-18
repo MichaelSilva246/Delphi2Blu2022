@@ -1,0 +1,167 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 628
+  ClientWidth = 911
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lbResultado: TLabel
+    Left = 277
+    Top = 144
+    Width = 37
+    Height = 16
+    Caption = 'Litros'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbCreate: TLabel
+    Left = 472
+    Top = 98
+    Width = 53
+    Height = 16
+    Caption = 'Gasolina'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 464
+    Top = 54
+    Width = 161
+    Height = 23
+    Caption = 'Tabela de Precos'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object edtCombustivel: TEdit
+    Left = 72
+    Top = 90
+    Width = 175
+    Height = 24
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object rdTipoCombustivel: TRadioGroup
+    Left = 72
+    Top = 120
+    Width = 175
+    Height = 161
+    Caption = 'Tipo de Combustivel'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    Items.Strings = (
+      'Gasolina'
+      'Gasolina Adtivada'
+      'Alcool'
+      'Diesel')
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btnAbastecer: TButton
+    Left = 277
+    Top = 54
+    Width = 132
+    Height = 44
+    Caption = 'Abastecer'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    OnClick = btnAbastecerClick
+  end
+  object btnNovoPreco: TButton
+    Left = 464
+    Top = 277
+    Width = 132
+    Height = 45
+    Caption = 'Alterar Valor'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+  end
+  object rdAbastecer: TRadioGroup
+    Left = 72
+    Top = 41
+    Width = 175
+    Height = 43
+    Caption = 'Abastecer'
+    Columns = 2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    Items.Strings = (
+      'Por Valor'
+      'Por Litro')
+    ParentFont = False
+    TabOrder = 4
+  end
+  object edtNovoValor: TEdit
+    Left = 450
+    Top = 247
+    Width = 175
+    Height = 24
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+  end
+  object rdNovoValor: TRadioGroup
+    Left = 450
+    Top = 169
+    Width = 175
+    Height = 72
+    Caption = 'Trocar Valor / Combustivel'
+    Columns = 2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    Items.Strings = (
+      'Preco /l'
+      'QtdBomba'
+      'Combustivel')
+    ParentFont = False
+    TabOrder = 6
+  end
+end

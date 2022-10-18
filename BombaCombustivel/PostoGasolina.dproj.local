@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/15 08:42:51.000.924,=C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/15 08:46:38.000.649,=C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/15 08:46:50.000.435,=C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/10/15 08:46:55.000.171,=C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2022/10/15 08:47:11.000.740,=C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit5.pas</Transaction>
+    <Transaction>2022/10/15 08:47:47.000.873,C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\UBombaCombustivel.pas</Transaction>
+    <Transaction>2022/10/15 08:47:47.000.873,C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\UBombaCombustivel.dfm</Transaction>
+    <Transaction>2022/10/15 08:51:14.000.226,C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\UBombaCombustivel.pas=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UBombaCombustivel.pas</Transaction>
+    <Transaction>2022/10/15 08:51:14.000.226,C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\UBombaCombustivel.dfm=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UBombaCombustivel.dfm</Transaction>
+    <Transaction>2022/10/15 08:51:25.000.586,C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit5.pas=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UDiesel.pas</Transaction>
+    <Transaction>2022/10/15 08:51:35.000.884,C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit4.pas=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UAlcool.pas</Transaction>
+    <Transaction>2022/10/15 08:51:39.000.441,C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit3.pas=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UGasolina.pas</Transaction>
+    <Transaction>2022/10/15 08:51:46.000.309,C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\uFrmPrincipal.pas</Transaction>
+    <Transaction>2022/10/15 08:51:46.000.309,C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\uFrmPrincipal.dfm</Transaction>
+    <Transaction>2022/10/15 08:51:54.000.721,C:\Users\xxbeb\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\PostoGasolina.dproj</Transaction>
+    <Transaction>2022/10/15 08:57:51.000.991,C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UBombaCombustivel.pas=</Transaction>
+    <Transaction>2022/10/15 08:58:00.000.318,=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\Unit1.pas</Transaction>
+    <Transaction>2022/10/15 08:58:10.000.574,C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UBombaGasolina.pas=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\Unit1.pas</Transaction>
+    <Transaction>2022/10/15 08:58:31.000.950,C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UBombaCombustivel.pas=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UBombaGasolina.pas</Transaction>
+    <Transaction>2022/10/15 08:58:32.000.076,C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UBombaGasolina.pas=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UBombaCombustivel.pas</Transaction>
+    <Transaction>2022/10/15 08:58:49.000.705,C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UBombaCombustivel.pas=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UBombaGasolina.pas</Transaction>
+    <Transaction>2022/10/15 09:00:03.000.699,=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\Unit2.pas</Transaction>
+    <Transaction>2022/10/15 09:00:12.000.320,=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\Unit1.pas</Transaction>
+    <Transaction>2022/10/15 09:00:31.000.772,C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\UGasolinaAditivada.pas=C:\Users\xxbeb\OneDrive\Área de Trabalho\BombaCombustivel\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

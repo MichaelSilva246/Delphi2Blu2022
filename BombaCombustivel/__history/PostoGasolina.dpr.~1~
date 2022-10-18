@@ -1,0 +1,19 @@
+program PostoGasolina;
+
+uses
+  Vcl.Forms,
+  uFrmPrincipal in 'uFrmPrincipal.pas' {Form1},
+  UBombaCombustivel in 'UBombaCombustivel.pas' {Form2},
+  UGasolina in 'UGasolina.pas',
+  UAlcool in 'UAlcool.pas',
+  UDiesel in 'UDiesel.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.
