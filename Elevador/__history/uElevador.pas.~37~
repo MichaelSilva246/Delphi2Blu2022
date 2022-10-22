@@ -1,0 +1,141 @@
+unit uElevador;
+
+interface
+type
+  TElevador = class
+
+   private
+
+      FAndar : Integer;
+      FQtdAndares : Integer;
+      FCapacidade : Integer;
+      FPessoasDentro : Integer;
+
+      procedure SetCapacidade(const Value: Integer);
+      procedure SetPessoasDentro(const Value: Integer);
+      procedure SetQtdAndares(const Value: Integer);
+      procedure SetAndar(const Value: Integer);
+
+      function GetAndar: Integer;
+      function GetQtdAndares: Integer;
+      function GetCapacidade: Integer;
+      function GetPessoasDentro: Integer;
+
+    public
+      constructor Create(const aCapacidade: Integer; const
+                 aQtdAndares: Integer; const aAndar : Integer  = 0 );
+
+      property QtdAndares : Integer read GetQtdAndares  write SetQtdAndares;
+      property Andar : Integer read GetAndar write SetAndar;
+      property Capacidade : Integer read GetCapacidade write SetCapacidade;
+      property PessoasDentro : Integer read GetPessoasDentro write SetPessoasDentro;
+
+      procedure AddPessoa(const aValue : Integer);
+      procedure RemovePessoa(const aValue : Integer);
+      procedure ElevadorSobe(const aValue : Integer);
+      procedure ElevadorDesce(const aValue : Integer);
+
+
+  end;
+
+implementation
+
+uses
+  Sysutils, Vcl.Dialogs;
+
+
+procedure TElevador.AddPessoa(const aValue: Integer);
+begin
+
+  if PessoasDentro + aValue > Capacidade  then
+
+    raise Exception.Create(' Capacidade maxima de: '+FloatToStr(Capacidade)+
+                       ' Favor não Ultrapassar o limite!');
+    ShowMessage(' Pessoa(s) Adicionada(s).');
+  PessoasDentro := PessoasDentro + aValue;
+end;
+
+procedure TElevador.RemovePessoa(const aValue: Integer);
+begin
+
+  if PessoasDentro - aValue <= 0    then
+
+      raise Exception.Create(' Não há ninguém no elevador, ou saindo pessoas demais! ' );
+      ShowMessage(' Pessoa(s) Removida(s)');
+  PessoasDentro := PessoasDentro - aValue;
+
+end;
+
+procedure TElevador.ElevadorDesce(const aValue: Integer);
+begin
+
+  if aValue - andar <= 0  then
+
+      raise Exception.Create('Você está no terreo, ou tentando descer demais!!');
+      ShowMessage(' Descida com Sucesso!');
+  andar := aValue + andar ;
+
+end;
+
+procedure TElevador.ElevadorSobe(const aValue: Integer);
+begin
+  if aValue + andar >= QtdAndares  then
+
+    raise Exception.Create('Elevador Já está no Ultimo Andar!!');
+    ShowMessage('Subida com Sucesso!');
+  andar := aValue + andar ;
+
+end;
+
+
+constructor TElevador.Create(const aCapacidade, aQtdAndares, aAndar: Integer);
+begin
+  Capacidade := aCapacidade;
+  QtdAndares := aQtdAndares;
+  Andar := aAndar;
+end;
+
+
+function TElevador.GetAndar: Integer;
+begin
+  Result := FAndar;
+end;
+
+function TElevador.GetCapacidade: Integer;
+begin
+  Result := FCapacidade;
+end;
+
+function TElevador.GetPessoasDentro: Integer;
+begin
+  Result := FPessoasDentro;
+end;
+
+function TElevador.GetQtdAndares: Integer;
+begin
+  Result := FQtdAndares;
+end;
+
+
+procedure TElevador.SetAndar(const Value: Integer);
+begin
+  Fandar := Value;
+end;
+
+
+procedure TElevador.SetCapacidade(const Value: Integer);
+begin
+  FCapacidade := Value;
+end;
+
+procedure TElevador.SetPessoasDentro(const Value: Integer);
+begin
+  FPessoasDentro := Value;
+end;
+
+procedure TElevador.SetQtdAndares(const Value: Integer);
+begin
+  FQtdAndares := Value;
+end;
+
+end.

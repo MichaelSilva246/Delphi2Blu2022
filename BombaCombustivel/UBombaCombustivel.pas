@@ -3,6 +3,7 @@ unit UBombaCombustivel;
 interface
   Type
     TBomba = class
+
     private
       FTipoCombustivel : String;
       FValorPorLitro : Currency;
@@ -32,16 +33,14 @@ interface
 
    constructor Create(const aValorPorLitro: Currency; const aQuantidadeNaBomba: Double;
                                const aTipoCombustivel: String);
-  end;
+    end;
+
+  implementation
 
 
-
-implementation
-
-{ TBomba }
 uses
   SysUtils;
-
+{ TBomba }
 
 function TBomba.abastecePorValor(const aValue: Currency): Double;
 begin
@@ -116,6 +115,3 @@ begin
 end;
 
 end.
-
-
-

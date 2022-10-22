@@ -27,6 +27,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure btnNovoPrecoClick(Sender: TObject);
     procedure Informacoes;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure PassaCombustivel(const aValue: String);
   private
     FBomba : TBomba;
      { Private declarations }
@@ -44,97 +46,38 @@ implementation
 
 
 procedure TForm1.Abastecer;
-var
-  xValor : Currency;
 begin
   case TCombustivel(rdTipoCombustivel.ItemIndex) of
 
     tpGasolina:
-    begin
-     if rdAbastecer.ItemIndex = 0 then // Por Valor
-      begin
-        xValor := Fbomba.abastecePorValor(StrToCurr(edtCombustivel.text));
-        lbResultado.caption := (' Voce Abasteceu Gasolina  ')+#13#10+(' Quantidade : ')+FloatToStr(xValor);
-      end
-     else                                // Por Litro
-      begin
-        xValor := FBomba.abastecerPorLitro(StrToFloat(edtCombustivel.Text));
-        lbResultado.caption := (' Voce Abasteceu Gasolina ')+#13#10+(' Valor a ser pago : ')+CurrToStr(xValor);
-        FBomba.alterarQuantidadeCombustivel(StrToFloat(edtCombustivel.Text));
-      end;
-    end;
+      Self.PassaCombustivel(' Gasolina ');
 
     tpGasolina_Adtv:
-    begin
-     if rdAbastecer.ItemIndex = 0 then // Por Valor
-      begin
-        xValor := Fbomba.abastecePorValor(StrToCurr(edtCombustivel.text));
-        lbResultado.caption := (' Voce Abasteceu Gasolina Adtv ')+#13#10+(' Quantidade : ')+FloatToStr(xValor);
-      end
-
-     else                             // Por Litro
-      begin
-        xValor := FBomba.abastecerPorLitro(StrToFloat(edtCombustivel.Text));
-        lbResultado.caption := (' Voce Abasteceu Gasolina Adtv ')+#13#10+(' Valor a ser pago : ')+CurrToStr(xValor);
-        FBomba.alterarQuantidadeCombustivel(StrToFloat(edtCombustivel.Text));
-      end;
-    end;
+      Self.PassaCombustivel(' Gasolina Adtv ');
 
     tpAlcool:
-    begin
-     if rdAbastecer.ItemIndex = 0 then // Por Valor
-      begin
-         xValor := Fbomba.abastecePorValor(StrToCurr(edtCombustivel.text));
-         lbResultado.caption := (' Voce Abasteceu Alcool  ')+#13#10+(' Quantidade : ')+FloatToStr(xValor);
-      end
-
-     else                              // Por Litro
-      begin
-        xValor := FBomba.abastecerPorLitro(StrToFloat(edtCombustivel.Text));
-        lbResultado.caption := (' Voce Abasteceu Alcool ')+#13#10+(' Valor a ser pago : ')+CurrToStr(xValor);
-        FBomba.alterarQuantidadeCombustivel(StrToFloat(edtCombustivel.Text));
-      end;
-    end;
+      Self.PassaCombustivel(' Alcool ');
 
     tp_Diesel:
-    begin
-     if rdAbastecer.ItemIndex = 0 then // Por Valor
-      begin
-        xValor := Fbomba.abastecePorValor(StrToCurr(edtCombustivel.text));
-        lbResultado.caption := (' Voce Abasteceu Diesel  ')+#13#10+(' Quantidade : ')+FloatToStr(xValor);
-      end
-
-     else                            // Por Litro
-      begin
-        xValor := FBomba.abastecerPorLitro(StrToFloat(edtCombustivel.Text));
-        lbResultado.caption := (' Voce Abasteceu Diesel ')+#13#10+(' Valor a ser pago : ')+CurrToStr(xValor);
-        FBomba.alterarQuantidadeCombustivel(StrToFloat(edtCombustivel.Text));
-      end;
-    end;
+       Self.PassaCombustivel(' Diesel ');
 
   end;
 end;
 
 procedure TForm1.TrocarValores;
-var
-  xValor : String;
 begin
   case Trocar(rdTrocaValores.ItemIndex) of
 
   tpPrecoLitro:
-    begin
-      FBomba.alterarValor(StrToCurr(edtNovoValor.text));
-    end;
+    FBomba.alterarValor(StrToCurr(edtNovoValor.text));
+
 
   tpQtdBomba:
-    begin
-      FBomba.QuantidadeNaBomba:=(StrToFloat(edtNovoValor.text));
-    end;
+    FBomba.QuantidadeNaBomba:=(StrToFloat(edtNovoValor.text));
+
 
   tpCombustivel:
-    begin
-      FBomba.alterarCombustivel(edtNovoValor.text);
-    end;
+    FBomba.alterarCombustivel(edtNovoValor.text);
 
   end;
 end;
@@ -149,6 +92,11 @@ procedure TForm1.btnNovoPrecoClick(Sender: TObject);
 begin
   TrocarValores;
   Informacoes;
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FreeAndNil(FBomba);
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
@@ -167,6 +115,24 @@ procedure TForm1.Informacoes;
 begin
     lbCreate.caption := FBomba.TipoCombustivel+ '  Valor : ' +CurrToStr(FBomba.ValorPorLitro)+('/l.')+#13#10+
                     ('Quantidade na Bomba : ')+FloatToStr(FBomba.QuantidadeNaBomba)+(' Litros.');
+end;
+
+
+procedure TForm1.PassaCombustivel(const aValue: String);
+var
+  xValor : Currency;
+begin
+  if rdAbastecer.ItemIndex = 0 then
+    begin
+      xValor := Fbomba.abastecePorValor(StrToCurr(edtCombustivel.text));
+      lbResultado.caption := (' Voce Abasteceu ' + aValue)+#13#10+(' Quantidade : ')+FloatToStr(xValor);
+    end
+  else
+    begin
+      xValor := FBomba.abastecerPorLitro(StrToFloat(edtCombustivel.Text));
+      lbResultado.caption := (' Voce Abasteceu '+ aValue)+#13#10+(' Valor a ser pago : ')+CurrToStr(xValor);
+      FBomba.alterarQuantidadeCombustivel(StrToFloat(edtCombustivel.Text));
+    end;
 end;
 
 end.

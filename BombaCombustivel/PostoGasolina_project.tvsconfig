@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<TgConfig Version="3" SubLevelDisabled="False">
+  <Option Name="namespaceFolder.PostoGasolina" Type="System.String" Value="PostoGasolina" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.UBombaCombustivel" Type="System.String" Value="UBombaCombustivel" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.UBombaCombustivel.Namespace1" Type="System.String" Value="UBombaCombustivel\Namespace1" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.UBombaCombustivel.Namespace2" Type="System.String" Value="UBombaCombustivel\Namespace2" Category="General" IsBrowsable="False" />
+</TgConfig>

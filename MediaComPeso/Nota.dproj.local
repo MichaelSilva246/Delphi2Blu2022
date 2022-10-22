@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/05 21:19:00.000.310,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 21:14:44.367,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 21:15:19.513,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/21 21:15:30.572,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/21 21:16:02.739,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/10/21 21:43:26.679,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\MediaComPeso\uFrmPrincipal.dfm=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/21 21:43:26.679,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\MediaComPeso\uFrmPrincipal.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/21 21:43:43.384,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\MediaComPeso\UAluno.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/21 21:43:51.433,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\MediaComPeso\UDisciplina.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2022/10/21 21:43:57.741,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\MediaComPeso\Nota.dproj=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

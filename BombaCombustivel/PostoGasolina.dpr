@@ -3,11 +3,7 @@ program PostoGasolina;
 uses
   Vcl.Forms,
   uFrmPrincipal in 'uFrmPrincipal.pas' {Form1},
-  UGasolina in 'UGasolina.pas',
-  UAlcool in 'UAlcool.pas',
-  UDiesel in 'UDiesel.pas',
-  UBombaCombustivel in 'UBombaCombustivel.pas',
-  UGasolinaAditivada in 'UGasolinaAditivada.pas';
+  UBombaCombustivel in 'UBombaCombustivel.pas';
 
 {$R *.res}
 

@@ -1,0 +1,78 @@
+unit uFrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, uElevador;
+
+type
+  TElevadorNum = (TpAddPessoa, tpRemovePessoa, tpSobe, tpDesce);
+  TForm1 = class(TForm)
+    rdElevador: TRadioGroup;
+    lbAndares: TLabel;
+    LbCapacidade: TLabel;
+    btnOK: TButton;
+    edtValor: TEdit;
+    procedure FormCreate(Sender: TObject);
+    procedure btnOKClick(Sender: TObject);
+  private
+    FElevador : TElevador;
+    procedure FuncoesElevador;
+    procedure Infos;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnOKClick(Sender: TObject);
+begin
+  FuncoesElevador;
+  Infos
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  FElevador := TElevador.Create(StrToInt(inputbox('Capacidade', 'Digite a capacidade do elevador', ''))
+        ,StrToInt(inputbox('Andares', 'Digite a Quantidade de Andares ', '')));
+
+  lbAndares.caption :=  ' Quantidade Andares : '+IntToStr(FElevador.Capacidade)+ #13#10+
+                        ' Capacidade : ' +IntToStr(FElevador.Capacidade);
+end;
+
+
+procedure TForm1.FuncoesElevador;
+
+begin
+  case TElevadorNum(rdElevador.ItemIndex) of
+
+    tpAddPessoa:
+      FElevador.AddPessoa(StrToInt(edtValor.Text));
+
+    tpRemovePessoa:
+      FElevador.RemovePessoa(StrToInt(edtValor.Text));
+
+    tpSobe:
+      FElevador.ElevadorSobe(StrToInt(edtValor.Text));
+
+    tpDesce:
+      FElevador.ElevadorDesce(StrToInt(edtValor.Text));
+
+  end;
+end;
+
+procedure TForm1.Infos;
+begin
+  LbCapacidade.caption := ' Estamos no '+IntToStr(FElevador.Andar)+'º, andar' +#13#10+
+                          ' Temos dentro do elevador '+IntToStr(FElevador.PessoasDentro)+'Pessoas';
+end;
+
+end.

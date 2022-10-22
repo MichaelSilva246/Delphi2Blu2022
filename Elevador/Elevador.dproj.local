@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/05 21:19:00.000.310,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 20:58:54.000.879,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 20:59:10.000.281,=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/19 21:22:59.000.704,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Elevador\uElevador.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/10/19 21:23:05.000.184,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Elevador\uFrmPrincipal.pas=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 21:23:05.000.184,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Elevador\uFrmPrincipal.dfm=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/10/19 21:23:07.000.309,C:\Users\michaelrodrigo\Documents\Delphi2Blu2022\Elevador\Elevador.dproj=C:\Users\michaelrodrigo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
